@@ -1,6 +1,4 @@
 app.views.cities = Backbone.View.extend({
-   
-
     render: function () {
         this.$el.html(this.template());
         return this;
@@ -11,8 +9,9 @@ app.views.cities = Backbone.View.extend({
     },
 
     go: function(event) {
+    		alert($('select').val());
     		var key = $('select').val();
+    		alert(key);
 			app.router.navigate('gmap/'+ key +'',{trigger: true});
     }
-	
 });
