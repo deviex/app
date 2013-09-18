@@ -5,10 +5,11 @@ app.views.cities = Backbone.View.extend({
     },
 	
 	events: {
-        "click .go": "go"
+		"onclick .go": "go"
     },
 
     go: function(event) {
+    		debugger;
     		alert($('select').val());
     		var key = $('select').val();
     		alert(key);

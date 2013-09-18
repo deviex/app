@@ -1,5 +1,4 @@
 app.routers.AppRouter = Backbone.Router.extend({
-
     routes: {
 		"":							"login",
 		"destination":				"city",
@@ -14,9 +13,7 @@ app.routers.AppRouter = Backbone.Router.extend({
         });
         this.firstPage = true;
     },
-
-	
-	
+    
 	login: function() {
 		if (!app.loginView) {
 			console.log("creating new object");
@@ -27,12 +24,9 @@ app.routers.AppRouter = Backbone.Router.extend({
             app.loginView.delegateEvents(); // delegate events when the view is recycled
         }
 	},
-
    
     city: function(){
             this.changePage(new app.views.cities());
-        
-    	
     },
     
     home: function (id) {
@@ -59,10 +53,6 @@ app.routers.AppRouter = Backbone.Router.extend({
        });
     	console.log("changing view");
     },
-	
-	
-	
-     
  	
     XperiencePage: function (id) {
 	
@@ -96,5 +86,4 @@ app.routers.AppRouter = Backbone.Router.extend({
         }
         $.mobile.changePage($(page.el), {changeHash:false, transition: transition});
     }
-    
 });

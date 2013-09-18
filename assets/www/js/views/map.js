@@ -1,6 +1,4 @@
 app.views.map = Backbone.View.extend({
-   
-	
     render: function () {
 		console.log("Rendering map view");
         this.$el.html(this.template);	
@@ -40,7 +38,5 @@ app.views.map = Backbone.View.extend({
 					}
 				}
 			app.google.places.reset(newfiltered);
-
     }
-	
 });

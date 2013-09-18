@@ -1,7 +1,6 @@
 /*FB.Event.subscribe('auth.logout', function(response) {
          alert('auth.logout event');
          });
-            
 */
 
 var app = {
@@ -25,7 +24,6 @@ $(document).on("ready", function () {
             app.router = new app.routers.AppRouter();
             Backbone.history.start();
 			FB.init({ appId: "520455088008607", nativeInterface: CDV.FB, useCachedDialogs: false });
-			
         });
 		
 	FB.Event.subscribe('auth.statusChange', function(event) {
@@ -52,7 +50,5 @@ $(document).on("ready", function () {
 	FB.Event.subscribe('auth.statusChange', function(response) {
 	        alert('auth.statusChange event');
 	        });
-		
 }
-
 );
